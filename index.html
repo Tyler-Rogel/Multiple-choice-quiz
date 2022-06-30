@@ -16,9 +16,14 @@
       <div v-if="page == 'quizPage'">
         <h1>Quiz Page</h1>
         <div v-for="question in quiz">
-          {{question.title}}<br>{{question.questionText}}
-            <select>
-              <option>{{question.answers.text}}</option>
+          {{question.title}}<br/>{{question.questionText}}
+            <select v-model="question.userAnswer">
+            <!-- <option>{{question.userAnswer}}</option> -->
+              <option>{{question.answers[0].text}}</option>
+              <option>{{question.answers[1].text}}</option>
+              <option>{{question.answers[2].text}}</option>
+              <option>{{question.answers[3].text}}</option>
+              
             </select>
           </div>
         </div>

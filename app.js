@@ -1,30 +1,4 @@
-/*
-// Example quiz object might look like:
-var QUIZ = [
-    {
-        title: "Question 1",
-        questionText: "What is the 3rd letter in the alphabet?",
-        answers: [
-            {text: "a", correct: false},
-            {text: "b", correct: false},
-            {text: "c", correct: true},
-            {text: "d", correct: false}
-        ],
-        userAnswer: ""
-    },
-    {
-        title: "Question 2",
-        questionText: "How many licks to the center of a tootsie pop?",
-        answers: [
-            {text: "3", correct: true},
-            {text: "682", correct: false},
-            {text: "841", correct: false},
-            {text: "1000", correct: false},
-        ],
-        userAnswer: ""
-    }
-]
-*/
+
 
 
 
