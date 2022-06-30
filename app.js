@@ -59,7 +59,9 @@ var app = new Vue({
             }
             if (count == 3){
                     console.log("Finished");
+                    this.page = "scorePage";
                     console.log(count);
+                    console.log(this.page);
             } else{
                 console.log("Not Finished");
                 console.log(count);
@@ -68,7 +70,9 @@ var app = new Vue({
         checkCorrectAnswers: function () {
             var score = 0
             for (i = 0; i > this.quiz.length; i++){
-                if (this.quiz[i].userAnswer.correct == true)
+                if (this.quiz[i].userAnswer.correct == true) {
+                    score += 1;
+                }
             }
         }
     },
