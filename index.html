@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Multiple Choice Quiz</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="app">
-        <h1>Multiple Choice Quiz</h1>
+      <h1>Multiple Choice Quiz</h1>
 
-        <!-- Title page -->
-    <div v-if="page == 'titlePage'">
+      <!-- Title page -->
+      <div v-if="page == 'titlePage'">
         <h1>Title Page</h1>
         <button @click="page = 'quizPage'">Go to quiz</button>
-
-
-    </div>
-        <!-- Quiz page -->
-        <div v-if="page == 'quizPage'">
-<h1>Quiz Page</h1>
-
-
-</div>
-        <!-- Score page -->
+      </div>
+      <!-- Quiz page -->
+      <div v-if="page == 'quizPage'">
+        <h1>Quiz Page</h1>
+        <div v-for="question in quiz">
+          {{question.title}}<br />{{question.questionText}}
+            <select>
+              <option>{{answers.text}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Score page -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

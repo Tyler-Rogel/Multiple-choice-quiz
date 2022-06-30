@@ -34,6 +34,35 @@ var app = new Vue({
         // to attach your global quiz variable to a data variable:
         // myQuiz: QUIZ,
         page: "titlePage",
+        quiz: [
+            {title: "Question 1",
+            questionText: "What is the 3rd letter in the alphabet?",
+            answers: [
+                {text: "a", correct: false},
+                {text: "b", correct: false},
+                {text: "c", correct: true},
+                {text: "d", correct: false}
+            ],
+            userAnswer: ""},
+            {title: "Question 2",
+            questionText: "What is the 3rd letter in the alphabet?",
+            answers: [
+                {text: "a", correct: false},
+                {text: "b", correct: false},
+                {text: "c", correct: true},
+                {text: "d", correct: false}
+            ],
+            userAnswer: ""},
+            {title: "Question 3",
+            questionText: "What is the 3rd letter in the alphabet?",
+            answers: [
+                {text: "a", correct: false},
+                {text: "b", correct: false},
+                {text: "c", correct: true},
+                {text: "d", correct: false}
+            ],
+            userAnswer: ""}
+        ]
     },
     methods:{
         // used for showing questions individually
