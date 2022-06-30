@@ -47,11 +47,34 @@ var app = new Vue({
 
         setPage: function (page) {},
 
-        calculateScore: function () {}
+        calculateScore: function () {},
+        areAllQuestionsAnswered: function () {
+            var count = 0
+            for(i = 0; i < this.quiz.length; i++){
+                if (this.quiz[i].userAnswer == "") {
+                    count -= 1;
+                }else{
+                    count += 1;
+                }
+            }
+            if (count == 3){
+                    console.log("Finished");
+                    console.log(count);
+            } else{
+                console.log("Not Finished");
+                console.log(count);
+            }
+        },
+        checkCorrectAnswers: function () {
+            var score = 0
+            for (i = 0; i > this.quiz.length; i++){
+                if (this.quiz[i].userAnswer.correct == true)
+            }
+        }
     },
     computed: {
         // a function that returns true if 0 userAnswer fields are blank ("")
         // IF there is still 1 or more blank ("") userAnswer field, return false
-        areAllQuestionsAnswered: function () {}
+        
     }
 });
